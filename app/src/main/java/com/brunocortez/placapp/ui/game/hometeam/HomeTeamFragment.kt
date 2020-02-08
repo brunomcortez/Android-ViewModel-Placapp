@@ -24,11 +24,10 @@ class HomeTeamFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        btNextStep.setOnClickListener { nextScreen() }
+        btNextStep.setOnClickListener { sendHomeTeamName() }
     }
 
     private fun nextScreen() {
-        sendHomeTeamName()
 
         val ft = activity?.supportFragmentManager?.beginTransaction()
         ft?.setCustomAnimations(

@@ -31,11 +31,10 @@ class EventFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         inputEvent.setupClearButtonWithAction()
-        btNextStep.setOnClickListener { nextScreen() }
+        btNextStep.setOnClickListener { sendEventName() }
     }
 
     private fun nextScreen() {
-        sendEventName()
 
         val ft = activity?.supportFragmentManager?.beginTransaction()
         ft?.setCustomAnimations(

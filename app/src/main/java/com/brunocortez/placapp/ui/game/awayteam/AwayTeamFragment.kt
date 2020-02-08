@@ -25,11 +25,10 @@ class AwayTeamFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        btNextStep.setOnClickListener { nextScreen() }
+        btNextStep.setOnClickListener { sendAwayTeamName() }
     }
 
     private fun nextScreen() {
-        sendAwayTeamName()
         val nextScreen = Intent(activity, ScoreActivity::class.java)
         startActivity(nextScreen)
         activity?.finish()
